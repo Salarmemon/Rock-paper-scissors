@@ -1,0 +1,71 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #3c3cad;
+}
+
+h1 {
+    text-align:center;
+    background-color: #020305;
+    color:#ee3fb9;
+    letter-spacing: clamp(5px, 2vw, 20px);
+    font-size:clamp(2.5rem, 5vw, 7rem);
+    font-weight: 900;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #041833;
+    margin:48px;
+}
+h2 {
+    text-align: center;
+    color:#e5e5f8;
+    margin:30px;
+    font-size: clamp(2rem, 5vw, 5.5rem);
+}
+.win-condition-text {
+    color:#cbcbcb;
+    font-size: clamp(2rem, 3vw, 4.5rem);
+
+
+}
+
+.scores-box {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.score {
+    color:#e5e5e8;
+    font-size:clamp(2rem, 3vw, 4.5rem);
+    margin:24px;
+}
+
+.choices-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+}
+
+.choice-btn {
+    width: 100px;
+    height:80px;
+    margin:20px;
+    cursor: pointer;
+
+}
+
+.choice-btn:hover {
+    transform: scale(1.2);
+}
