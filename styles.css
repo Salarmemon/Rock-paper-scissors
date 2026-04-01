@@ -59,13 +59,17 @@ h2 {
 }
 
 .choice-btn {
-    width: 100px;
-    height:80px;
+    width: 10vw;
+    height:10vw;
     margin:20px;
     cursor: pointer;
-
+     font-size:clamp(2rem, 4vw, 6rem);
+    background-color: #041833;
+    transition: all 0.3s ease;
 }
 
 .choice-btn:hover {
     transform: scale(1.2);
+    font-size:clamp(3rem, 6vw, 8rem);
+   
 }

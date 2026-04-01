@@ -17,3 +17,5 @@ This is traditiona al Rock Paper Scissors game built as part of my Odin Project 
 ### 📸 Attributions
 
 Images and sounds are sourced from free stock platforms such as Unsplash and Pixabay.
+
+Staple release from paper by redpanda69 -- https://freesound.org/s/686187/ -- License: Creative Commons 0
