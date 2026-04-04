@@ -19,3 +19,5 @@ This is traditiona al Rock Paper Scissors game built as part of my Odin Project 
 Images and sounds are sourced from free stock platforms such as Unsplash and Pixabay.
 
 Staple release from paper by redpanda69 -- https://freesound.org/s/686187/ -- License: Creative Commons 0
+
+Mouse click sounds by Masgame -- https://freesound.org/s/347544/ -- License: Creative Commons 0
