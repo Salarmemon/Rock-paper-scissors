@@ -22,6 +22,8 @@ const resultDialog = getElm("result-dialog", "class");
 const roundStatus = getElm("status", "class");
 const hoverSound = getElm("hover-sound", "id");
 const clickSound = getElm("click-sound", "id");
+const winnerEm = getElm("game-winner", "id");
+const resetBtn = getElm("reset-btn", "class");
 const numOfRounds = 5;
 console.log(choiceBtns, playerScoreElm, computerScoreElm, resultDialog, roundStatus)
 let playerScore = 0;
@@ -48,11 +50,22 @@ const decideRound = (player, computer) => {
 }
 
 // update UI 
-
+let winnerMessage = '';
 const updateUI = (result) => {
     playerScoreElm.textContent = playerScore;
     computerScoreElm.textContent = computerScore;
     roundStatus.textContent = result;
+
+    if (playerScore >= numOfRounds || computerScore >= numOfRounds) {
+        if (playerScore === 5) {
+            winnerMessage = "You win the game!";
+        } else {
+            winnerMessage = "You lost the game try again!"
+        }
+        winnerEm.textContent = winnerMessage;
+        resultDialog.classList.remove("hidden");
+        resultDialog.showModal()
+    }
 }
 // generate computer's choice
 
@@ -75,6 +88,18 @@ const playSound = (sound) => {
     sound.play();
     lastPlayed = now;
 }
+
+//resetGame 
+
+const resetGame = () => {
+    resultDialog.close();
+    resultDialog.classList.add("hidden");
+    playerScore = 0;
+    computerScore = 0;
+    roundStatus.textContent = "Choose Your Strike!";
+    playerScoreElm.textContent = playerScore;
+    computerScoreElm.textContent = computerScore;
+}
 choiceBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     playSound(clickSound);
@@ -91,3 +116,5 @@ choiceBtns.forEach((btn) => {
         playSound(hoverSound);
     })
 })
+
+resetBtn.addEventListener("click", resetGame);

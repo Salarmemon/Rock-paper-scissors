@@ -24,16 +24,17 @@ main {
     flex-direction: column;
     background-color: #041833;
     margin:48px;
+    width:80vw
 }
 h2 {
     text-align: center;
     color:#e5e5f8;
     margin:30px;
-    font-size: clamp(2rem, 5vw, 5.5rem);
+    font-size: clamp(1.2rem, 5vw, 5.5rem);
 }
 .win-condition-text {
     color:#cbcbcb;
-    font-size: clamp(2rem, 3vw, 4.5rem);
+    font-size: clamp(1rem, 3vw, 4.5rem);
 
 
 }
@@ -42,12 +43,13 @@ h2 {
     display:flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
 }
 
 .score {
     color:#e5e5e8;
-    font-size:clamp(2rem, 3vw, 4.5rem);
+    font-size:clamp(1rem, 3vw, 4.5rem);
     margin:24px;
 }
 
@@ -55,21 +57,61 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:50px;
+    gap:1vw;
+
 }
 
 .choice-btn {
     width: 10vw;
     height:10vw;
-    margin:20px;
     cursor: pointer;
-     font-size:clamp(2rem, 4vw, 6rem);
+     font-size:clamp(1rem, 4vw, 6rem);
     background-color: #041833;
     transition: all 0.3s ease;
 }
 
 .choice-btn:hover {
     transform: scale(1.2);
-    font-size:clamp(3rem, 6vw, 8rem);
+    font-size:clamp(1.5rem, 6vw, 8rem);
    
+}
+
+.result-dialog {
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    height: 50%;
+    margin: auto;
+    gap: 2.5vw;
+
+}
+#game-winner {
+    font-size: clamp(1.2rem, 4vw, 6rem);
+    color:#011622;
+}
+
+.reset-btn {
+    width:20vw;
+    height:12vw;
+    border-radius: 25%;
+    border: 1px solid #3c3cad;
+    background: linear-gradient(90deg, #600444, #f005aa);
+    color: whitesmoke;
+    transition: all 0.3s;
+    font-size: clamp(0.8rem, 2vw, 4rem);
+
+}
+.reset-btn:hover {
+    transform: scale(1.1);
+    transform: translate(-10px);
+    box-shadow: 0 0 10px 20px  #600444;
+    
+}
+
+.hidden {
+    visibility: hidden;
+
 }
